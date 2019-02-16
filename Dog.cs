@@ -25,7 +25,6 @@ namespace Dog
             Owner = dogOwner;
             Age = dogAge;
             Gender = dogGender;
-            Pronoun = dogPronoun;
         }
 
         public Dog()
