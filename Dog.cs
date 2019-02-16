@@ -48,6 +48,7 @@ namespace Dog
 
         public void GetTag()
         {
+            // check age
             if (Age > 1)
             {
                 switch (Gender)

@@ -4,57 +4,36 @@
 
 using System;
 
-public enum Gender
-{
-    Male,
-    Female
-}
-
 namespace Dog
 {
-    public class Dog
-    {
-        public string name;
-        public string owner;
-        public int age;
-        readonly Gender gender;
-
-        public Dog(string dogName, string dogOwner, int dogAge, Gender dogGender)
-        {
-            name = dogName;
-            owner = dogOwner;
-            age = dogAge;
-            gender = dogGender;
-        }
-
-        public Dog()
-        {
-        }
-
-
-        public void Bark(int to)
-        {
-            int number = 0;
-
-            while (number < 5)
-            {
-                Console.WriteLine(number);
-                number = number + 1;
-            }
-
-            Console.ReadLine();
-        }
-    }
 
     class MainClass
+    {
+        public static void Main(string[] args)
         {
-            public static void Main(string[] args)
-            {
-            var dog = new Dog();
+            Dog puppy = new Dog(); // create object instance
+            puppy.Name = "Max";
+            puppy.Owner = "William";
+            puppy.Age = 3;
+            puppy.Gender = Gender.Male;
 
-            dog.Bark = "{0}";
+            Dog myDog = new Dog(); // create new object
+            myDog.Name = "Lexi";
+            myDog.Owner = "Ashley";
+            myDog.Age = 1;
+            myDog.Gender = Gender.Female;
 
+            // display output
+            puppy.Bark(3);
+            puppy.GetTag();
+
+            Console.WriteLine("\n");
+            myDog.Bark(1);
+            myDog.GetTag();
+
+            // display exit message
+            Console.WriteLine("\nPress Enter to exit...");
             Console.ReadLine();
         }
-        }
     }
+}
