@@ -18,7 +18,6 @@ namespace Dog
         public string Owner;
         public int Age;
         public Gender Gender;
-        public string Pronoun = "His";
 
         public Dog(string dogName, string dogOwner, int dogAge, Gender dogGender, string dogPronoun)
         {
